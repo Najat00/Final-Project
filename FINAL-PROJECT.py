@@ -4,7 +4,7 @@
 from argparse import ArgumentParser
 import re
 import sys
-from #insert file name# import #class, function(s)#
+from #insert file name# import #class, function(s)
 
 #Nikky 
 class Movie_Generator: #class
