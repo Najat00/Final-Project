@@ -13,7 +13,7 @@ def movie_database(csv, film):
         csv (str): a string containing the path to the csv file to be read.
         film (str): the type of film you are looking for (movie, documentary, etc)  
     Returns:
-        TBD
+        A DataFrame that displays films that match your film choice.
     """
     pd.set_option('display.max_rows', None)
     df = pd.read_csv(csv)
