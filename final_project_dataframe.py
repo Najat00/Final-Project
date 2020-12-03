@@ -9,6 +9,9 @@ def movie_database(csv, film):
         film (str): the type of film you are looking for (movie, documentary, etc)  
     Returns:
         A DataFrame that displays films that match your film choice.
+        
+    Note: It may be helpful to look at the movies.csv file to know what filmtypes you can choose from.
+    
     """
     pd.set_option('display.max_rows', None)
     df = pd.read_csv(csv)
