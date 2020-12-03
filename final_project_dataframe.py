@@ -3,7 +3,13 @@ import pandas as pd
 import sys
 
 def movie_database(csv, film):
-    """ """
+    """ This method reads a CSV file containing different movies and their respective information.
+    Args:
+        csv (str): a string containing the path to the csv file to be read.
+        film (str): the type of film you are looking for (movie, documentary, etc)  
+    Returns:
+        TBD
+    """
     df = pd.read_csv(csv)
     print(df)
     fil = df[df["film"] == film]
