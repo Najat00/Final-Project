@@ -4,35 +4,38 @@
 from argparse import ArgumentParser
 import re
 import sys
-from #insert file name# import #class, function(s)
+
 
 #Nikky 
-class Movie_Generator: #class
-"""This module reads in a text file with movies and their relevant information. 
-It then returns a list of movies that meets the requirements of the information specified by the user
-Args:
-title (str): the title of the film
-film_type (str): the type of film 
-director (str): the director of the film
-rating (float): the rating of the film 0.0-10.0
-runtime (int): the duration of the film in minutes
-year (int): the year the film was released
-genre (str): the genre of the film 
-Returns:
-a list of movies that meets the requirements of the information put into the generator"""
+def movie_database(csv, film):
+    """ This method reads a CSV file containing different movies and their respective information.
+    Args:
+        csv (str): a string containing the path to the csv file to be read.
+        film (str): the type of film you are looking for (movie, documentary, etc)  
+    Returns:
+        TBD
+    """
+    pd.set_option('display.max_rows', None)
+    df = pd.read_csv(csv)
+    fil = df[df["filmtype"] == film]
+    cols1 = "rating"
+    cols = fil[cols1].max()
+    duration = fil[fil[cols1]==cols]["duration"]
+    top_movies = duration.iloc[0]
+    print(df[df["filmtype"]== film])
+    return (top_movies, cols)
 
-	def __init__(self, title, film_type, director, rating, runtime, year, genre): #init method
-"""This method initializes information about the move. 
-The parameters are self, title, filmtype,author, rating, runtime, year, genre."""
+def parse_args(arglist):
+    """ Parse command-line arguments """
+    parser = ArgumentParser()
+    parser.add_argument("csv", help="the path to the csv file")
+    parser.add_argument("film", help="the type of film you want to find")
+    return parser.parse_args(arglist)
 
-#attributes
-self.title = title
-self.film_type = filmtype
-self.director = director
-self.rating = rating
-self.runtime = runtime
-self.year = year
-self.genre = genre
+
+if __name__ == "__main__":
+    args = parse_args(sys.argv[1:])
+    movie_database(args.csv, args.film)
 
 #Najat
 class Restriction(Movie_generator): #subclass and using the super() function
