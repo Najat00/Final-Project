@@ -12,13 +12,7 @@ def movie_database(csv, film):
     """
     pd.set_option('display.max_rows', None)
     df = pd.read_csv(csv)
-    fil = df[df["filmtype"] == film]
-    cols1 = "rating"
-    cols = fil[cols1].max()
-    duration = fil[fil[cols1]==cols]["duration"]
-    top_movies = duration.iloc[0]
     print(df[df["filmtype"]== film])
-    return (top_movies, cols)
 
 def parse_args(arglist):
     """ Parse command-line arguments """
