@@ -61,14 +61,47 @@ def parse_args(arglist): #utilizing the parse function
 #Emma’s headers and docstrings (3, 4):
 def read_text(self, filename):
 """
-Purpose is to run through and read the text file that contains the movie information in it
-Attributes: filename(dic): the text file containing the movie information
-Returns: a dictionary of movies which includes each movies individual directors, runtimes, ratings, year of release, genre, and type of film
+Purpose is to read the file and use the information to create 
+the Movie_Generator class
+Attributes: filename(str): the name of the text file containing the movie information
+Returns: a list of results of the movies in the file given
 """
-#strip function
-def strip_text(self, filename):
-"""
-Purpose is to remove unwanted grammar marks, spaces, and other objects so that our code runs and returns information as smoothly as possible 
-Attributes: filename(dic): the text file containing the movie information
-Returns: list from the movie text file that is striped of all unwanted grammer objects
-"""
+def read_text():
+    self.results=[]
+    with open(filename, "r", encoding="utf-8") as f:
+        for line in r:
+            strip=line.strip()
+            split=line.spliy(";")
+            movie=split[0]
+            film_type=split[1]
+            director=split[2]
+            ratings=split[3]
+            run_time=split[4]
+            year=split[5]
+            genre=split[6]
+            results.append(Movie_Generator(movie, film_type, director,
+                                           ratings, run_time, year, genre))
+    return self.results
+            
+def year_generate(input):
+    """
+    Purpose: Generates a list of movies from a users desired decade to choose from 
+    Attributes: input(str): the information that the user answered with
+    Returns: a list of movies from the decade that the user asks for
+    """
+    if input= "1950":
+        return year>1949 and year<1960
+    elif input="1960":
+        return year>1959 and year<1970
+    elif input="1970":
+        return year>1969 and year<1980
+    elif input="1980":
+        return year>1979 and year<1990
+    elif input="1990":
+        return year>1989 and year<2000
+    elif input="2000":
+        return year>1999 and year<2010
+    elif input="2010":
+        return year>2000
+    else:
+        raise ValueError("Enter a decade between 1950 and 2010")
