@@ -1,4 +1,4 @@
-title,film,director,rating,duration,year,genre
+title,filmtype,director,rating,duration,year,genre
 11:14,Movie,Greg Marcks,7.2,86,2003,Crime
 42,Movie,Brian Helgeland,7.5,128,2013,Biography 
 300,Movie,Zack Snyder,7.7,117,2006,Action 
