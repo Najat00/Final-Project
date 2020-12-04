@@ -71,7 +71,7 @@ Returns: a list of results of the movies in the file given
             run_time=split[4]
             year=split[5]
             genre=split[6]
-            results.append(Movie_Generator(movie, film_type, director,
+            results.append(movie, film_type, director,
                                            ratings, run_time, year, genre))
     return self.results
             
@@ -101,4 +101,4 @@ def year_generate(input):
         raise ValueError("Enter a decade between 1950 and 2010")
     
 yeartype = int(input("What decade would you like to watch a movie from? "))
-    if yeartype is <= 1960:
+    
