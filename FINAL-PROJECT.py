@@ -37,8 +37,7 @@ def __init__(self,age, genre):
         self.age = age
         self.genre = genre
 user_age= int(input("What is your age?"))
-yeartype = int(input("What decade would you like to watch a movie from? "))
-    if yeartype is >= range:
+
          
 #Dale's
 #opening file function 
@@ -82,7 +81,7 @@ def year_generate(input):
     Attributes: input(str): the information that the user answered with
     Returns: a list of movies from the decade that the user asks for
     Raises:
-    Value Error
+    Value Error if year is not between 1
     """
     if input= "1950":
         return year>1949 and year<1960
@@ -101,4 +100,5 @@ def year_generate(input):
     else:
         raise ValueError("Enter a decade between 1950 and 2010")
     
-def
+yeartype = int(input("What decade would you like to watch a movie from? "))
+    if yeartype is <= 1960:
