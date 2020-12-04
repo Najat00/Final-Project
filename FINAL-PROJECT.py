@@ -81,24 +81,27 @@ def year_generate(input):
     Attributes: input(str): the information that the user answered with
     Returns: a list of movies from the decade that the user asks for
     Raises:
-    Value Error if year is not between 1
+    Value Error if year is not between 1950 and 2010
     """
-    if input= "1950":
+    #Najat  
+    yeartype = int(input("What decade would you like to watch a movie from? "))
+    return # a list of movies from that year
+    #Emma
+    if yeartype= "1950":
         return year>1949 and year<1960
-    elif input="1960":
+    elif yeartype="1960":
         return year>1959 and year<1970
-    elif input="1970":
+    elif yeartype="1970":
         return year>1969 and year<1980
-    elif input="1980":
+    elif yeartype="1980":
         return year>1979 and year<1990
-    elif input="1990":
+    elif yeartype="1990":
         return year>1989 and year<2000
-    elif input="2000":
+    elif yeartype="2000":
         return year>1999 and year<2010
-    elif input="2010":
+    elif yeartype="2010":
         return year>2000
     else:
         raise ValueError("Enter a decade between 1950 and 2010")
-    
-yeartype = int(input("What decade would you like to watch a movie from? "))
+ 
     
