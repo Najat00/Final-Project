@@ -59,6 +59,14 @@ def parse_args(arglist): #utilizing the parse function
     #5) input function requesting age/genre/ and or year( input and generate conditionals)
     #6) use input data to fetch user recommendations (conditionals and return results) """
 
+def movie_pair(self, filename):
+    """Responsible for creating key values for Movie title, genres and Film type
+    EX: dict1{Action: IronMan, Hulk, Assasin} essentially dicionaries based on genre
+    then based of users input we move onto 
+    dic2{IronMan: etc, etc, etc}
+    dic3{}
+    Parameters: self, filename
+    Filename: name of movie txt filename """
 #Emma’s headers and docstrings (3, 4):
 
 def read_text(self, filename):
