@@ -55,7 +55,7 @@ def parse_args(arglist): #utilizing the parse function
     #2) Focus on opening the txt file and reading it in ( read txt file and parse)
     #3) Parse the txt file and sort based upon genre and year
     #4) completed dict that has each movie title stored as an individual key and addiional info 
-    stored as values ( generate dict and sort data)
+    #   stored as values ( generate dict and sort data)
     #5) input function requesting age/genre/ and or year( input and generate conditionals)
     #6) use input data to fetch user recommendations (conditionals and return results) """
 #Emma’s headers and docstrings (3, 4):
