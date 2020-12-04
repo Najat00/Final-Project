@@ -64,8 +64,8 @@ def read_text(self, filename):
 Purpose is to read the file and use the information to create 
 the Movie_Generator class
 Attributes: filename(str): the name of the text file containing the movie information
-Returns: a list of results of the movies in the file given
-"""
+Returns: 
+a list of results of the movies in the file given"""
     self.results=[]
     with open(filename, "r", encoding="utf-8") as f:
         for line in f:
