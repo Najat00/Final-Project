@@ -33,17 +33,22 @@ if __name__ == "__main__": #Nikky
     movie_database(args.csv, args.film)
 
 #Najat
+
+
+
+
 class Restriction(Movie_generator): #subclass and using the super() function
-"""A class that puts a restriction on the Genre of Horror and Thriller using the super() function”””
+"""A class that puts a restriction on the age Genre of Horror and Thriller using the super() function”””
     Attributes(str):
-        age(int): value between 0-12  inclusive
-        Genre(str): imported from self.genre, genre of the movie
+        init()
+        _str()
 
     Methods:
-        __init__()
-        __str__()
-"""
-
+        age(int): value between 0-12  inclusive
+        Genre(str): imported from self.genre, genre of the movie
+        """
+    def __init__(self,age, genre):
+        
 #Dale's
 #opening file function 
 """Responsible for creating key values for Movie title, genres and Film type
