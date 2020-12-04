@@ -36,7 +36,7 @@ if __name__ == "__main__": #Nikky
 def __init__(self,age, genre):
         self.age = age
         self.genre = genre
-        
+yeartype = int(input("What decade would you like to watch a movie fron? "))
 #Dale's
 #opening file function 
 """Responsible for creating key values for Movie title, genres and Film type
