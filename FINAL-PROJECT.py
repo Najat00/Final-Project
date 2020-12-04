@@ -58,7 +58,9 @@ def parse_args(arglist): #utilizing the parse function
     #   stored as values ( generate dict and sort data)
     #5) input function requesting age/genre/ and or year( input and generate conditionals)
     #6) use input data to fetch user recommendations (conditionals and return results) """
+
 #Emma’s headers and docstrings (3, 4):
+
 def read_text(self, filename):
 """
 Purpose is to read the file and use the information to create 
