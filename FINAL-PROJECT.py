@@ -37,7 +37,8 @@ def __init__(self,age, genre):
         self.age = age
         self.genre = genre
 yeartype = int(input("What decade would you like to watch a movie from? "))
-    if yeartype is >=  
+    if yeartype is >= range:
+         
 #Dale's
 #opening file function 
 """Responsible for creating key values for Movie title, genres and Film type
@@ -61,7 +62,7 @@ Returns: a list of results of the movies in the file given
 def read_text():
     self.results=[]
     with open(filename, "r", encoding="utf-8") as f:
-        for line in r:
+        for line in f:
             strip=line.strip()
             split=line.spliy(";")
             movie=split[0]
@@ -80,6 +81,8 @@ def year_generate(input):
     Purpose: Generates a list of movies from a users desired decade to choose from 
     Attributes: input(str): the information that the user answered with
     Returns: a list of movies from the decade that the user asks for
+    Raises:
+    Value Error
     """
     if input= "1950":
         return year>1949 and year<1960
