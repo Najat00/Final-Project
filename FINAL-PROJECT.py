@@ -37,8 +37,8 @@ def __init__(self,age, genre):
         self.age = age
         self.genre = genre
 user_age= int(input("What is your age?"))
-    if user_age < 12:
-        return ("You are not of age to watch this movie")
+if user_age < 12:
+    return ("You are not of age to watch this movie")
       
 #Dale's
 #opening file function 
