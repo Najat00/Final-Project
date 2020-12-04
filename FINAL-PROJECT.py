@@ -36,6 +36,7 @@ if __name__ == "__main__": #Nikky
 def __init__(self,age, genre):
         self.age = age
         self.genre = genre
+user_age= int(input("What is your age?"))
 yeartype = int(input("What decade would you like to watch a movie from? "))
     if yeartype is >= range:
          
@@ -99,3 +100,5 @@ def year_generate(input):
         return year>2000
     else:
         raise ValueError("Enter a decade between 1950 and 2010")
+    
+def
