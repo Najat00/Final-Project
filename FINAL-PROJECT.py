@@ -37,8 +37,9 @@ def __init__(self,age, genre):
         self.age = age
         self.genre = genre
 user_age= int(input("What is your age?"))
-
-         
+    if user_age < 12:
+        return ("You are not of age to watch this movie")
+      
 #Dale's
 #opening file function 
 """Responsible for creating key values for Movie title, genres and Film type
@@ -50,7 +51,13 @@ def parse_args(arglist): #utilizing the parse function
     
     Arguments:
         arglist """
-
+#1) Use Pandas to print out a graphical representation of the txt file (Pandas and args)
+    #2) Focus on opening the txt file and reading it in ( read txt file and parse)
+    #3) Parse the txt file and sort based upon genre and year
+    #4) completed dict that has each movie title stored as an individual key and addiional info 
+    stored as values ( generate dict and sort data)
+    #5) input function requesting age/genre/ and or year( input and generate conditionals)
+    #6) use input data to fetch user recommendations (conditionals and return results) """
 #Emma’s headers and docstrings (3, 4):
 def read_text(self, filename):
 """
