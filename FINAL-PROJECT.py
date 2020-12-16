@@ -31,19 +31,6 @@ def __init__(self,age, genre):
     self.name = user_name
     year = input("What decade would you like to watch a movie from? ")
     self.year = int(year)
-
-
-
-def movie_pair(self, filename):
-    """Responsible for creating key values for Movie title, genres and Film type
-    EX: dict1{Action: IronMan, Hulk, Assasin} essentially dicionaries based on genre
-    then based of users input we move onto 
-    dic2{IronMan: etc, etc, etc}
-    dic3{}
-    Parameters: self, filename
-    Filename: name of movie txt filename """
-#Emma’s headers and docstrings (3, 4):
-
 def read_text(self, filename):
     """
     Purpose is to read the file and use the information to create 
@@ -65,6 +52,18 @@ def read_text(self, filename):
             genre=split[6]
             self.results.append(title, filmtype, director, ratings, duration, year, genre)
         return self.results
+
+def movie_pair(self, filename):
+    """Responsible for creating key values for Movie title, genres and Film type
+    EX: dict1{Action: IronMan, Hulk, Assasin} essentially dicionaries based on genre
+    then based of users input we move onto 
+    dic2{IronMan: etc, etc, etc}
+    dic3{}
+    Parameters: self, filename
+    Filename: name of movie txt filename """
+#Emma’s headers and docstrings (3, 4):
+
+
             
 def year_generate(decade):
     """
