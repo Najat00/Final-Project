@@ -26,11 +26,12 @@ def movie_database(csv, film): #Nikky
     print(df[df["filmtype"]== film])
 
 #Najat
-def __init__(self,age, genre):
+def __init__(self,name, year):
     user_name = input("Hi! What is your name? ")
     self.name = user_name
     year = input("What decade would you like to watch a movie from? ")
     self.year = int(year)
+
 def read_text(self, filename):
     """
     Purpose is to read the file and use the information to create 
@@ -39,7 +40,7 @@ def read_text(self, filename):
         filename(str): the name of the text file containing the movie information
     Returns: 
     a list of results of the movies in the file given"""
-    self.results=[]
+    #self.results=[]
     with open(filename, "r", encoding="utf-8") as f:
         for line in f:
             split=line.split(",")
@@ -48,13 +49,13 @@ def read_text(self, filename):
             director=split[2]
             ratings=split[3]
             duration=split[4]
-            year=split[5]
+            year1 =split[5]
             genre=split[6]
-            self.results.append(title, filmtype, director, ratings, duration, year, genre)
-        return self.results
+            #self.results.append(title, filmtype, director, ratings, duration, year, genre)
+       #return self.results
 
 def movie_pair(self, filename):
-    """Responsible for creating key values for Movie title, genres and Film type
+    """Responsible for creating key values for Movie year
     EX: dict1{Action: IronMan, Hulk, Assasin} essentially dicionaries based on genre
     then based of users input we move onto 
     dic2{IronMan: etc, etc, etc}
@@ -65,7 +66,7 @@ def movie_pair(self, filename):
 
 
             
-def year_generate(decade):
+def year_generate():
     """
     Purpose: Generates a list of movies from a users desired decade to choose from 
     Attributes: input(str): the information that the user answered with
@@ -73,7 +74,6 @@ def year_generate(decade):
     Raises:
     Value Error if year is not between 1950 and 2010
     """
-   
     #Emma
     if year == "1950":
         return year>1949 and year<1960
