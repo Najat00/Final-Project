@@ -25,17 +25,6 @@ def movie_database(csv, film): #Nikky
     df = pd.read_csv(csv)
     print(df[df["filmtype"]== film])
 
-def parse_args(arglist): #Nikky
-    """ Parse command-line arguments """
-    parser = ArgumentParser()
-    parser.add_argument("csv", help="the path to the csv file")
-    parser.add_argument("film", help="the type of film you want to find")
-    return parser.parse_args(arglist)
-
-
-if __name__ == "__main__": #Nikky
-    args = parse_args(sys.argv[1:])
-    movie_database(args.csv, args.film)
 
 
 #Najat
@@ -108,4 +97,14 @@ def year_generate(decade):
     else:
         raise ValueError("Enter a decade between 1950 and 2010")
  
-    
+def parse_args(arglist): #Nikky
+    """ Parse command-line arguments """
+    parser = ArgumentParser()
+    parser.add_argument("csv", help="the path to the csv file")
+    parser.add_argument("film", help="the type of film you want to find")
+    return parser.parse_args(arglist)
+
+
+if __name__ == "__main__": #Nikky
+    args = parse_args(sys.argv[1:])
+    movie_database(args.csv, args.film)
