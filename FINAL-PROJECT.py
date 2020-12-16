@@ -37,13 +37,13 @@ if __name__ == "__main__": #Nikky
     args = parse_args(sys.argv[1:])
     movie_database(args.csv, args.film)
 
+
 #Najat
 def __init__(self,age, genre):
-        self.age = age
-        self.genre = genre
-user_age= int(input("What is your age? "))
-if user_age < 12:
-    print("You are not of age to watch these movies on your own!")
+    user_age = input("What is your age? ")
+    self.age = int(user_age)
+    user_genre = input("What genre selection would you like? ")
+    self.genre = user_genre
 
 
 
