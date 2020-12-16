@@ -51,7 +51,7 @@ def read_text(self, filename):
             duration=split[4]
             year1 =split[5]
             genre=split[6]
-            #self.results.append(title, filmtype, director, ratings, duration, year, genre)
+        print(title, filmtype, director, ratings, duration, year1, genre)
        #return self.results
 
 def movie_pair(self, filename):
