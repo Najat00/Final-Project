@@ -80,7 +80,7 @@ def read_text(self, filename):
             self.results.append(title, filmtype, director, ratings, duration, year, genre)
         return self.results
             
-def year_generate(input):
+def year_generate(year):
     """
     Purpose: Generates a list of movies from a users desired decade to choose from 
     Attributes: input(str): the information that the user answered with
