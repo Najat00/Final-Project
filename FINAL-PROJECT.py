@@ -27,11 +27,10 @@ def movie_database(csv, film): #Nikky
 
 #Najat
 def __init__(self,age, genre):
-    user_age = input("What is your age? ")
-    self.age = int(user_age)  
-    year = int(input("What decade would you like to watch a movie from? "))
-    self.genre = user_genre
-
+    user_name = input("Hi! What is your name? ")
+    self.name = user_name
+    year = input("What decade would you like to watch a movie from? ")
+    self.year = int(year)
 
 
 
