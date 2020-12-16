@@ -25,13 +25,11 @@ def movie_database(csv, film): #Nikky
     df = pd.read_csv(csv)
     print(df[df["filmtype"]== film])
 
-
-
 #Najat
 def __init__(self,age, genre):
     user_age = input("What is your age? ")
-    self.age = int(user_age)
-    user_genre = input("What genre selection would you like? ")
+    self.age = int(user_age)  
+    year = int(input("What decade would you like to watch a movie from? "))
     self.genre = user_genre
 
 
@@ -77,8 +75,7 @@ def year_generate(decade):
     Raises:
     Value Error if year is not between 1950 and 2010
     """
-    #Najat  
-    year = int(input("What decade would you like to watch a movie from? "))
+   
     #Emma
     if year == "1950":
         return year>1949 and year<1960
