@@ -7,7 +7,7 @@ import sys
 import pandas as pd
 
 def welcome_user():
-    print("\nHello! Welcome to the INST326 Movie Database! This program will allow you to view a database of movies and sort by film type and when it was released.\n")
+    print("\nHello! Welcome to the INST326 Movie Database! This program will allow you to view a database of movies and sort by film type and when it was released. Below you will find the database and all the movies that are in it.\n")
 welcome_user()
 
 class MovieDB:
