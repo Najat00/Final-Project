@@ -51,65 +51,57 @@ class MovieDB:
         
         """
         pd.set_option('display.max_rows', None)
-        self.decade = input("\nWhat decade would you like to view films for? ")
-        print("\n")
+        self.decade = input("\nWhat decade would you like to view films for?\n")
+
         if self.decade == "1950":
-            a = self.movie_db[(self.movie_db["year"] >= "1950") & (self.movie_db["year"] < "1960")]
-            print(a)
+            return self.movie_db[(self.movie_db["year"] >= "1950") & (self.movie_db["year"] < "1960")]
         elif self.decade == "1960":
-            b = self.movie_db[(self.movie_db["year"] >= "1960") & (self.movie_db["year"] < "1970")]
-            print(b)
+            return self.movie_db[(self.movie_db["year"] >= "1960") & (self.movie_db["year"] < "1970")]
         elif self.decade == "1970":
-            c = self.movie_db[(self.movie_db["year"] >= "1970") & (self.movie_db["year"] < "1980")]
-            print(c)
+            return self.movie_db[(self.movie_db["year"] >= "1970") & (self.movie_db["year"] < "1980")]
         elif self.decade == "1980":
-            d = self.movie_db[(self.movie_db["year"] >= "1980") & (self.movie_db["year"] < "1990")]
-            print(d)
+            return self.movie_db[(self.movie_db["year"] >= "1980") & (self.movie_db["year"] < "1990")]
         elif self.decade == "1990":
-            e = self.movie_db[(self.movie_db["year"] >= "1990") & (self.movie_db["year"] < "2000")]
-            print(e)
+            return self.movie_db[(self.movie_db["year"] >= "1990") & (self.movie_db["year"] < "2000")]
         elif self.decade == "2000":
-            f = self.movie_db[(self.movie_db["year"] >= "2000") & (self.movie_db["year"] < "2010")]
-            print(f)
+            return self.movie_db[(self.movie_db["year"] >= "2000") & (self.movie_db["year"] < "2010")]
         elif self.decade == "2010":
-            g = self.movie_db[(self.movie_db["year"] >= "2010") & (self.movie_db["year"] < "2020")]
-            print(g)
-        print('\n')
+            return self.movie_db[(self.movie_db["year"] >= "2010") & (self.movie_db["year"] < "2020")]
+
+        return None
         
     def movie_type(self):
         """
         
         """
         pd.set_option('display.max_rows', None)
-        self.filmtype = input("What films would you like to see? ")
-        print("\n")
+        self.filmtype = input("What films would you like to see?\n")
+
         if self.filmtype == "Movie":
-            m = self.movie_db[(self.movie_db["filmtype"] == "Movie")]
-            print(m)
+            return self.movie_db[(self.movie_db["filmtype"] == "Movie")]
         elif self.filmtype == "Documentary":
-            d = self.movie_db[(self.movie_db["filmtype"] == "Documentary")]
-            print(d)
+            return self.movie_db[(self.movie_db["filmtype"] == "Documentary")]
         elif self.filmtype == "TV-S":
-            tvs = self.movie_db[(self.movie_db["filmtype"] == "TV-S")]
-            print(tvs)
+            return self.movie_db[(self.movie_db["filmtype"] == "TV-S")]
         elif self.filmtype == "TV-M":
-            tvm = self.movie_db[(self.movie_db["filmtype"] == "TV-M")]
-            print(tvm)
+            return self.movie_db[(self.movie_db["filmtype"] == "TV-M")]
         elif self.filmtype == "Short":
-            s = self.movie_db[(self.movie_db["filmtype"] == "Short")]
-            print(s)
-        print('\n')
+            return self.movie_db[(self.movie_db["filmtype"] == "Short")]
 
 def parse_args(arglist): #Nikky
     """ Parse command-line arguments """
+    if not arglist:
+        raise ValueError("no arguments")
     parser = ArgumentParser()
     parser.add_argument("filename", help="the path to the csv file")
     return parser.parse_args(arglist)
 
 
-if __name__ == "__main__": #Nikky
+if __name__ == "__main__": 
     args = parse_args(sys.argv[1:])
     movies = MovieDB(args.filename)
     movies.print_movies()
-    movies.decade_choice()
-    movies.movie_type()
+    decade = movies.decade_choice()
+    print(decade, "\n")
+    movie_types = movies.movie_type()
+    print(movie_types, "\n")
