@@ -72,7 +72,7 @@ class MovieDB:
         
     def movie_type(self):
         """
-        
+        hi
         """
         pd.set_option('display.max_rows', None)
         self.filmtype = input("What films would you like to see?\n")
@@ -105,3 +105,4 @@ if __name__ == "__main__":
     print(decade, "\n")
     movie_types = movies.movie_type()
     print(movie_types, "\n")
+    
