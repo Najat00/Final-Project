@@ -6,6 +6,9 @@ import sys
 import pandas as pd
 
 def welcome_user():
+    """ This function welcomes the user and explains the purpose of the program. 
+    It prints out the following messages before running the rest of the program. """
+    
     print("\nHello! Welcome to the INST326 Movie Database!")
     print("This program will allow you to view a database of movies, as well as sort by when it was released and film type.")
     print("Below you will find the database.\n")
@@ -13,6 +16,10 @@ def welcome_user():
 welcome_user()
 
 def age_verification():
+    """ This function verifies the age of the user. 
+    If the user is under the age of 13, the program terminates, as some movies in the database may not be suitable for younger users.
+    Otherwise, the program will move on to the next function. """
+    
     age = int(input("What is your age? "))
     if age < 13:
         print("You need a parents approval to access movies in this database!\n")
@@ -23,40 +30,38 @@ def age_verification():
 age_verification()
 
 class MovieDB:
-    """A class that allows users to select a movie according to decade and filmtype
+    """ A class that allows users to select a movie according to decade and filmtype
     Attributes:
-        filename: file,csv
+        filename: a path to the .csv file to be read in
     Methods:
-        __init__()
-        print_movies()
-        decade_choice()
-        movie_type 
-        """
+        __init__(), print_movies(), decade_choice(), movie_type() """
     
     
     def __init__(self,filename):
-        """A function that sets the parameters for filename reads and creates a movie database 
+        """ A function that sets the parameters for filename reads and establishes a movie database 
         Args:
-            (methods)filename
-            """
+            filename: a path to the .csv file to be read in. """
         self.movie_db = pd.read_csv(filename)
 
-    def print_movies(self): #Nikky
-        """ This method reads a CSV file containing different movies and their respective information.
-        Args:
-            csv (str): a string containing the path to the csv file to be read.
-            film (str): the type of film you are looking for (movie, documentary, etc)  
+    def print_movies(self):
+        """ This method turns the information in the .csv file into a dataframe.
+ 
         Returns:
-            A DataFrame that displays films that match your filmtype choice.
+            A DataFrame that displays films in the .csv file.
         
-        Note: It may be helpful to look at the movies.csv file to know what "filmtypes" you can choose from.
+        Note: It may be helpful to look at the movies.csv file to know what "filmtypes" are present in the file.
         
         """
-        #pd.set_option('display.max_rows', None)
+        
         print(self.movie_db)
         
     def decade_choice(self):
-        """
+        """ This method prompts the user to enter the decade that they would like to view films from. It then returns a dataframe with only films created 
+        in that decade.
+        Args:
+            decade: a decade specified by the user
+        Returns:
+            A dataframe with only films from that decade
         
         """
         pd.set_option('display.max_rows', None)
@@ -80,8 +85,13 @@ class MovieDB:
         return None
         
     def movie_type(self):
-        """
-        hi
+        """ This method prompts the user to enter the type of film that they would like to view. It then returns a dataframe with only films that are in the
+        category specified by the user.
+        Args:
+            filmtype: the type of film, as specified by the user
+        Returns:
+            A dataframe with only the specific filmtype specified.
+        
         """
         pd.set_option('display.max_rows', None)
         self.filmtype = input("What films would you like to see?\n")
