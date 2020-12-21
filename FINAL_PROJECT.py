@@ -36,7 +36,6 @@ class MovieDB:
     Methods:
         __init__(), print_movies(), decade_choice(), movie_type() """
     
-    
     def __init__(self,filename):
         """ A function that sets the parameters for filename reads and establishes a movie database 
         Args:
@@ -65,7 +64,7 @@ class MovieDB:
         
         """
         pd.set_option('display.max_rows', None)
-        self.decade = input("\nWhat decade would you like to view films for?\n")
+        self.decade = input("\nWhat decade would you like to view films for? ")
 
         if self.decade == "1950":
             return self.movie_db[(self.movie_db["year"] >= "1950") & (self.movie_db["year"] < "1960")]
@@ -94,7 +93,7 @@ class MovieDB:
         
         """
         pd.set_option('display.max_rows', None)
-        self.filmtype = input("What films would you like to see?\n")
+        self.filmtype = input("What films would you like to see? ")
 
         if self.filmtype == "Movie":
             return self.movie_db[(self.movie_db["filmtype"] == "Movie")]
