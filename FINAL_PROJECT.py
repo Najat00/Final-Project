@@ -23,13 +23,22 @@ def age_verification():
 age_verification()
 
 class MovieDB:
-    """
+    """A class that allows users to select a movie according to decade and filmtype
+    Attributes:
+        filename: file,csv
+    Methods:
+        __init__()
+        print_movies()
+        decade_choice()
+        movie_type 
+        """
     
-    """
+    
     def __init__(self,filename):
-        """
-        
-        """
+        """A function that sets the parameters for filename reads and creates a movie database 
+        Args:
+            (methods)filename
+            """
         self.movie_db = pd.read_csv(filename)
 
     def print_movies(self): #Nikky
@@ -38,7 +47,7 @@ class MovieDB:
             csv (str): a string containing the path to the csv file to be read.
             film (str): the type of film you are looking for (movie, documentary, etc)  
         Returns:
-            A DataFrame that displays films that match your film choice.
+            A DataFrame that displays films that match your filmtype choice.
         
         Note: It may be helpful to look at the movies.csv file to know what "filmtypes" you can choose from.
         
