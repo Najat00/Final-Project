@@ -1,5 +1,7 @@
 # Final-Project
- 
+
+Note: In order to view the example outputs in the proper format, please open this file in a text editor!
+
 .gitignore:
 The .gitignore file is the initial commit of our groups repository.
  
@@ -70,7 +72,7 @@ If the user enters an age greater than or equal to 13, the following dataframe s
 112    A View to a Kill    Movie           John Glen     6.3     131.0  1985      Action
 113       A World Apart    Movie        Chris Menges     6.8     112.0  1988       Drama
  
-The user will then be prompted to enter a decade that they would like to view films from". If the user enters "1980" the following dataframe should be displayed:
+The user will then be prompted to enter a decade that they would like to view films from. If the user enters "1980" the following dataframe should be displayed:
                                                 title filmtype          director  rating  duration  year                     genre
 11                             *batteries not included    Movie   Matthew Robbins     6.3     106.0  1987             Drama/Sci-Fi
 29                      2010: The Year We Make Contact    Movie       Peter Hyams     6.8     116.0  1984                    Sci-Fi
