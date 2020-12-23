@@ -1,4 +1,5 @@
-#Dale Nche, Emma Altenberg, Najat Abdella, Nikky Mittu
+#Dale Nche, Emma Altenberg, Najat Abdella, Nikeet Mittu
+#Movie Database
 
 from argparse import ArgumentParser
 import re
