@@ -12,9 +12,8 @@ def welcome_user():
     print("\nHello! Welcome to the INST326 Movie Database!")
     print("This program will allow you to view a database of movies, as well as sort by when it was released and film type.")
     print("Below you will find the database.\n")
-    
-welcome_user()
 
+    
 def age_verification():
     """ This function verifies the age of the user. 
     If the user is under the age of 13, the program terminates, as some movies in the database may not be suitable for younger users.
@@ -22,12 +21,10 @@ def age_verification():
     
     age = int(input("What is your age? "))
     if age < 13:
-        print("You need a parents approval to access movies in this database!\n")
-        exit()
-    elif age > 13:
+        sys.exit(f"\nThe age of {age} is to young. You'll need a parents approval to access movies in this database!\n")
+    elif age >= 13:
         pass
 
-age_verification()
 
 class MovieDB:
     """ A class that allows users to select a movie according to decade and filmtype
@@ -37,7 +34,7 @@ class MovieDB:
         __init__(), print_movies(), decade_choice(), movie_type() """
     
     def __init__(self,filename):
-        """ A function that sets the parameters for filename reads and establishes a movie database 
+        """ This function sets the parameters for filename reads and establishes a movie database 
         Args:
             filename: a path to the .csv file to be read in. """
         self.movie_db = pd.read_csv(filename)
@@ -64,7 +61,7 @@ class MovieDB:
         
         """
         pd.set_option('display.max_rows', None)
-        self.decade = input("\nWhat decade would you like to view films for? ")
+        self.decade = input("\nWhat decade would you like to view films for? Select a decade a between 1950 and 2010: ")
 
         if self.decade == "1950":
             return self.movie_db[(self.movie_db["year"] >= "1950") & (self.movie_db["year"] < "1960")]
@@ -106,7 +103,7 @@ class MovieDB:
         elif self.filmtype == "Short":
             return self.movie_db[(self.movie_db["filmtype"] == "Short")]
 
-def parse_args(arglist): #Nikky
+def parse_args(arglist):
     """ Parse command-line arguments """
     if not arglist:
         raise ValueError("no arguments")
@@ -117,10 +114,11 @@ def parse_args(arglist): #Nikky
 
 if __name__ == "__main__": 
     args = parse_args(sys.argv[1:])
+    welcome_user()
+    age_verification()
     movies = MovieDB(args.filename)
     movies.print_movies()
     decade = movies.decade_choice()
     print(decade, "\n")
     movie_types = movies.movie_type()
     print(movie_types, "\n")
-    
