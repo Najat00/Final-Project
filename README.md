@@ -10,7 +10,7 @@ FINAL-PROJECT.py:
 FINAL-PROJECT.py is the python file containing our code for the decade movie generator. It consists of eight different methods that work together to return different types of movies based on how the user responds to the prompts. The program will ask what decade the they want to view movies from, as well as what type of movie the user wants to see (i.e. documentaries, regular movies etc.). Before the user gets to the generator, our code will ask for the user's age in order to verify that the user is old enough to access the databse without a parent. If the user’s answers with an age below 13, the program will terminate. This is due to an age restriction to use our generator, since some of the movies in the database may not be suitable for younger users. If the user enters an age greater than or equal to 13, the program will then move on.
  
 movies.csv:
-movies.csv is the text file containing all the movies that the generator will search through. In total, the text file possesses 114 different movies. Each line is a movie with all of its corresponding information. The first part of each line is the title, followed by the type of movie (whether it is a regular movie or a documentary, etc.), the director, the films rating (on a scale of one to ten), its runtime (in minutes), the year the film was released, and lastly the genre. All information present in this file is accurate as per IMdb.
+movies.csv is the text file containing all the movies that the generator will search through. In total, the text file possesses 114 different movies. Each line is a movie with all of its corresponding information. The first part of each line is the title, followed by the type of movie (whether it is a regular movie or a documentary, etc.), the director, the films rating (on a scale of one to ten), its runtime (in minutes), the year the film was released, and lastly the genre. All information present in this file is accurate as per IMDb.
  
  
 README.md:
@@ -112,5 +112,6 @@ Annotated Bibliography:
 (2009, January 7). What does if __name__==”___main__”: do? Stack Overflow. https://stackoverflow.com/questions/419163/what-does-if-name-main-do
 We used this resource within our repository in order to write our docstring for the if __name__==”___main__” statement at the end of our code. This resource helped us to understand what this function does and how to explain it to our users through the use of docstrings.
 
-
+IMDb Datasets. (n.d.). Retrieved December 23, 2020, from https://m.imdb.com/interfaces/
+Retrieved data/movies from this file so that we are able to extract the movies and their corresponding information and place them into a csv. 
 
