@@ -10,11 +10,11 @@ FINAL-PROJECT.py:
 FINAL-PROJECT.py is the python file containing our code for the decade movie generator. It consists of eight different methods that work together to return different types of movies based on how the user responds to the prompts. The program will ask what decade the they want to view movies from, as well as what type of movie the user wants to see (i.e. documentaries, regular movies etc.). Before the user gets to the generator, our code will ask for the user's age in order to verify that the user is old enough to access the databse without a parent. If the user’s answers with an age below 13, the program will terminate. This is due to an age restriction to use our generator, since some of the movies in the database may not be suitable for younger users. If the user enters an age greater than or equal to 13, the program will then move on.
  
 movies.csv:
-movies.csv is the text file containing all the movies that the generator will search through. In total, the text file possesses 114 different movies. Each line is a new movie with all of its corresponding information. The first part of each line is the title of the video, followed by what kind of movie it is (whether it is a regular movie or a documentary, etc.), the director, the films rating (on a scale of one to ten), its runtime (in minutes), the year the film was released, and lastly the genre. All information present in this file is accurate as per IMDb.
+movies.csv is the text file containing all the movies that the generator will search through. In total, the text file possesses 114 different movies. Each line is a movie with all of its corresponding information. The first part of each line is the title, followed by the type of movie (whether it is a regular movie or a documentary, etc.), the director, the films rating (on a scale of one to ten), its runtime (in minutes), the year the film was released, and lastly the genre. All information present in this file is accurate as per IMdb.
  
  
 README.md:
-The README.md file includes our groups documentations, including an explanation of the purpose of each file within the repository, instructions on how to run the movie generator from the command line, as well as how to interpret the output, and an example output. Finally, an annotated bibliography of the sources the group used to develop the generator is also present.
+The README.md file includes our groups documentations, including an explanation of the purpose of each file within the repository, instructions on how to run the movie generator from the command line, as well as how to interpret the output, and an example output. Finally, an annotated bibliography of the sources, the group used to develop the generator is also present.
  
 test1.py:
 test1.py is the test script for our movie generator’s “parse args” function.
@@ -33,15 +33,16 @@ CODE INSTRUCTIONS:
 In order to run the program from the command line, use the following command:
 python3 FINAL_PROJECT.py movies.csv
 Note: For Windows users substitute python3 for python.
+
 From here, respond to the prompts as outlined below.
 The program will first ask the user what their age is. Type your age next to the prompt as an integer. (EXAMPLE: type "16", "23", "46", NOT “twenty six” or “thirty-two”) make sure there are no spaces between the numbers and that you enter an integer greater than 0.
-If the users age is less than 13, the program will return a message informing the user that they are too young to access the databse without their
+If the user's age is less than 13, the program will return a message informing the user that they are too young to access the databse without their
 parents permission.
 If the users age is greater than 13, it will continue to the next prompt.
 Next, the program will ask the user what decade they want to see movies from. Type the desired decade as an integer. (EXAMPLE: If you want to see movies from the 1960’s, type "1960" next the prompt. DO NOT type “1960’s” or nineteen sixties.)
 DO NOT input any decades that took place after the 2010’s or before the 1950’s as the movie file does not have movies from those years.
 DO NOT type in a specific year. For example, if you want to see a movie from 1998, type in "1990" in the command line and then look for movies from 1998 in the dataframe that is generated.
-Once the user is done has selected their desired decade, the command line will ask the user what type of film they want to see. Respond with one of the following choices: Movie, Documentary, TV-S (TV series), TV-M (movies), Short.
+Once the user is done has selected their desired decade, the command line will ask the user what type of film they want to see. Respond with one of the following choices: Movie, Documentary, TV-S, TV-M, Short.
 Note: This will not display those film's from your previously selected decade. This function will return ALL the films in the database that match your selection.
 By answering "Movie", the generator will return the movies the movies.csv file contains
 By answering "Documentary", the generator will return the documentaries the movies.csv file contains
@@ -52,9 +53,9 @@ By answering "Short", the generator will return the short films the movies.csv f
  
 INTERPRETING THE OUTPUT OF THE PROGRAM:
 The program first welcomes the user and explains what the purpose of the program is. This information is printed out as part of the opening function.
-Our Movie Generator will then prompt the user for their age. If their age is greater than 13, then the user will be able to continue using the program. However, if the user's age is less than 13, the generator will return the message: “The age of {age} is to young. You'll need a parents approval to access movies in this database!” and terminate the program.
-Once the user's age is verified, the program will print the first five and last five movies in the database. Please note this does not display every movie in the file, just the first few and last few.
-The program will then prompt the user for a decade they want to see movies from. The user has the option of choosing decades between and including the 1950’s through to the 2010’s. The resulting dataframe will display ALL the movies in the file that were released in the decade chosen by the user. The corresponding information includes the title of the movie, followed by what type of film it is, the director, the rating, the runtime, the year it was released, and the genre of the movie.
+Our Movie Generator will then prompt the user for their age. If their age is greater than 13, the user will be able to continue using the program. However, if the user's age is less than 13, the generator will return the message: “The age of {age} is too young. You'll need a parents approval to access movies in this database!” and terminate the program.
+Once the user's age is verified, the program will print the first five and last five movies in the database. Please note this does not display every movie in the file, only the first few and last few.
+The program will then prompt the user for the decade they want to see movies from. The user has the option of choosing decades between and including the 1950’s through to the 2010’s. The resulting dataframe will display ALL the movies in the file that were released in the decade chosen by the user. The corresponding information includes the title of the movie, followed by what type of film it is, the director, the rating, the runtime, the year it was released, and the genre of the movie.
 After the program returns the movies filtered by decade, it will then prompt the user for the type of film they want to see. Type of film refers to the type of film the user wants to view. The options are: Movie, Documentary, TV-S (TV series), TV-M (TV moviess) and Short (short films). When the user types their choice in the command line, the program will return the films that match the request of the user, as well as all the films corresponding information.
  
 EXAMPLE OUTPUT:
